@@ -5,15 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-
+# region criacao e ranzomizacao de objetos no mapa
 public class Mapa
 {
-    DefaultPosition[,] GameMap = new DefaultPosition[20,20];
-    int x ;
-    int y ;
+    DefaultPosition[,] GameMap = new DefaultPosition[20, 20];
+    int x;
+    int y;
+    int b;
+    int c;
     public Mapa()
     {
-        
+
         for (int i = 0; i < 20; i++)
         {
             for (int j = 0; j < 20; j++)
@@ -21,7 +23,7 @@ public class Mapa
                 GameMap[j, i] = new DefaultPosition();
             }
         }
-        
+
         GameMap[x, y] = new Hero();
         GameMap[19, 19] = new Destination();
 
@@ -36,15 +38,16 @@ public class Mapa
             {
                 if (enp == 6)
                 {
-                    
+
                     GameMap[mnstX, mnstY] = new Boss();
-                   
+                    b = mnstX;
+                    c = mnstY;
                 }
-                else 
+                else
                 {
-                    
+
                     GameMap[mnstX, mnstY] = new Monster();
-                    
+
                 }
                 enp++;
             }
@@ -58,7 +61,7 @@ public class Mapa
             {
                 if (inp == 8)
                 {
-                    
+
                     GameMap[itemX, itemY] = new Weapon();
 
                 }
@@ -71,48 +74,172 @@ public class Mapa
             }
         }
     }
-
-
-
-
-
+    #endregion
+    #region impressão matriz
     public void DisplayMap()
     {
-       
+        Console.WriteLine("dashboard superior");
         for (int i = 0; i < 20; i++)
         {
             for (int j = 0; j < 20; j++)
             {
                 GameMap[j, i].Print();
-
-
             }
             Console.WriteLine();
-
         }
         Console.ResetColor();
-
+        Console.WriteLine("dashboard superior");
     }
+    #endregion
+
+    #region move enemy
+    public void moveenemy()
+    {
+        Random rnd = new Random();
+
+        int[] index = new int[2];
+
+
+        int mIndex = rnd.Next(index.Length);
+        if (mIndex == 0) // para vertical
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    if (GameMap[j, i].GetType() == typeof(Monster))
+                    {
+                        if (i == 19 && j == 0 || i == 0 && j == 0)
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            j++;
+                            GameMap[j, i] = new Monster();
+                        }
+                        if (i == 0 && j == 19 || i == 19 && j == 19)
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            j--;
+                            GameMap[j, i] = new Monster();
+                        }
+                        int[] e = new int[2];
+                        int Index = rnd.Next(e.Length);
+                        if (Index == 0) // +1 para baixo 
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            i++;
+                            GameMap[j, i] = new Monster();
+                        }
+                        if (Index == 1) //-1 para cima
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            i--;
+                            GameMap[j, i] = new Monster();
+                        }
+                    }
+                }
+            }
+        }
+        if (mIndex == 1) // para horizontal
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    if (GameMap[j, i].GetType() == typeof(Monster))
+                    {
+                        int[] e = new int[2];
+                        int Index = rnd.Next(e.Length);
+                        if (Index == 0) // +1 para direita
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            j++;
+                            GameMap[j, i] = new Monster();
+                        }
+                        if (Index == 1) //-1 para esquerda
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            j--;
+                            GameMap[j, i] = new Monster();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    #endregion
+
+    #region moveboss
+    public void moveboss()
+    {
+        Random rnd = new Random();
+
+        int[] index = new int[2];
+
+
+        int mIndex = rnd.Next(index.Length);
+        if (mIndex == 0) // para vertical
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    if (GameMap[j, i].GetType() == typeof(Boss))
+                    {
+                        int[] e = new int[2];
+                        int Index = rnd.Next(e.Length);
+                        if (Index == 0) // +1 para baixo 
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            i++;
+                            GameMap[j, i] = new Boss();
+                        }
+                        if (Index == 1) //-1 para cima
+                        {
+                            GameMap[j, i] = new DefaultPosition();
+                            i--;
+                            GameMap[j, i] = new Boss();
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    #endregion
+
     #region move hero
     public void moveright()
-    { 
-            if (GameMap[x, y].GetType() == typeof(Hero))
+    {
+        if (GameMap[x, y].GetType() == typeof(Hero))
+        {
+            moveenemy();
+            moveboss();
+            if (x < 19)
             {
-                if (x < 19){
-                    GameMap[x, y] = new DefaultPosition();
-                    x++;                    
-                    GameMap[x, y] = new Hero();
-                    Console.Clear();
-                }
-                else if ( x == 19)
-                {                               
-                    GameMap[x, y] = new Hero();
-                    Console.Clear();
-                }           
-        }    
+                GameMap[x, y] = new DefaultPosition();
+                x++;
+                GameMap[x, y] = new Hero();
+                Console.Clear();
+            }
+            else if (x == 19)
+            {
+                GameMap[x, y] = new Hero();
+                Console.Clear();
+            }
+        }
     }
     public void moveleft()
     {
+        moveenemy();
+        moveboss();
         if (GameMap[x, y].GetType() == typeof(Hero))
         {
             if (x > 0)
@@ -131,6 +258,8 @@ public class Mapa
     }
     public void moveup()
     {
+        moveenemy();
+        moveboss();
         if (GameMap[x, y].GetType() == typeof(Hero))
         {
             if (y > 0)
@@ -146,11 +275,13 @@ public class Mapa
                 Console.Clear();
             }
         }
-    }                     
+    }
     public void movedown()
-    {              
-            if (GameMap[x, y].GetType() == typeof(Hero))
-            {
+    {
+        moveenemy();
+        moveboss();
+        if (GameMap[x, y].GetType() == typeof(Hero))
+        {
             if (y < 19)
             {
                 GameMap[x, y] = new DefaultPosition();
@@ -158,17 +289,17 @@ public class Mapa
                 GameMap[x, y] = new Hero();
                 Console.Clear();
             }
-            else if ( y == 19)
-            {                
+            else if (y == 19)
+            {
                 GameMap[x, y] = new Hero();
                 Console.Clear();
-                            }
-           }        
+            }
+        }
     }
     #endregion
     public DefaultPosition[,] GetMap()
     {
         return GameMap;
-    
+
     }
 }
