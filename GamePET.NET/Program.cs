@@ -7,7 +7,7 @@ namespace Game
         static void Main(string[] args)
         {
             #region Mapa
-            
+
             /*string[,] GameMap = new string[20, 20];
             for (int i = 0; i < 20; i++)
             {
@@ -167,7 +167,8 @@ namespace Game
             }
             #endregion
             */
-            GameMap
+            Mapa cx = new Mapa();
+            cx.DisplayMap();
         }
 
     }
