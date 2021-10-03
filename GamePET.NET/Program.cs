@@ -7,30 +7,53 @@ namespace Game
         static void Main(string[] args)
         {
             Mapa cx = new Mapa();
-            while (true) { 
-
-            
-            cx.DisplayMap();
-            ConsoleKeyInfo cki;
-            
-
-            do
+            while (true)
             {
-                cki = Console.ReadKey(true);
+
+
+                cx.DisplayMap();
+                ConsoleKeyInfo cki;
                 
 
-                if (cki.KeyChar == 'a'){
-                   cx.move;
-                }
                 
                 
-                
-               
+                    cki = Console.ReadKey(true);
+
+
+            if (cki.KeyChar == 'd')
+                    {
+                    
+                        cx.moveright();
+                    
+                    }
+                if (cki.KeyChar == 'a')
+                {
+                    cx.moveleft();
 
                 }
-            
+                if (cki.KeyChar == 'w')
+                {
+                    cx.moveup();
+
+                }
+                if (cki.KeyChar == 's')
+                {
+                    cx.movedown();
+
+                }
+
+
+
+
+
+
+
+
+            }
+            }
+
         }
 
     }
 
-}
+

@@ -11,6 +11,9 @@ public class Hero : DefaultPosition
     {
         Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("H ");
+
+
     }
+
 }
 

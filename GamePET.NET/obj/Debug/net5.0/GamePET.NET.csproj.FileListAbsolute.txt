@@ -30,3 +30,19 @@ C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\bin\Debug\ne
 C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\ref\GamePET.NET.dll
 C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.pdb
 C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.genruntimeconfig.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.csproj.AssemblyReference.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.AssemblyInfoInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.AssemblyInfo.cs
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.csproj.CoreCompileInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.exe
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.deps.json
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.runtimeconfig.json
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.runtimeconfig.dev.json
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\ref\GamePET.NET.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\bin\Debug\net5.0\GamePET.NET.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\ref\GamePET.NET.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.genruntimeconfig.cache
