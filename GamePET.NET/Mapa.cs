@@ -11,6 +11,8 @@ public class Mapa
     DefaultPosition[,] GameMap = new DefaultPosition[20,20];
     public Mapa()
     {
+        int x= 0;
+        int y= 0;
         for (int i = 0; i < 20; i++)
         {
             for (int j = 0; j < 20; j++)
@@ -75,6 +77,7 @@ public class Mapa
 
     public void DisplayMap()
     {
+       
         for (int i = 0; i < 20; i++)
         {
             for (int j = 0; j < 20; j++)
@@ -89,9 +92,30 @@ public class Mapa
         Console.ResetColor();
 
     }
+     public void move(int x, int y)
+    {
+       
+        for (int i = 0; i < 20; i++)
+        {
+            for (int j = 0; j < 20; j++)
+            {
+                if (GameMap[j,i] = Hero)
+                {
+                    i = i+1;
+                    Hero = Hero[j,i];
+                }
 
+
+            }
+            Console.WriteLine();
+
+        }
+        
+
+    }
     public DefaultPosition[,] GetMap()
     {
         return GameMap;
+    
     }
 }

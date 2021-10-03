@@ -6,11 +6,28 @@ namespace Game
     {
         static void Main(string[] args)
         {
-
             Mapa cx = new Mapa();
+            while (true) { 
+
+            
             cx.DisplayMap();
+            ConsoleKeyInfo cki;
+            
 
+            do
+            {
+                cki = Console.ReadKey(true);
+                
 
+                if (cki.KeyChar == 'a'){
+                   cx.move;
+                }
+                
+                
+                
+               
+
+                }
             
         }
 
