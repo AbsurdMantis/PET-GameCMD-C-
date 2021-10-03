@@ -7,7 +7,8 @@ namespace Game
         static void Main(string[] args)
         {
             #region Mapa
-            string[,] GameMap = new string[20, 20];
+            
+            /*string[,] GameMap = new string[20, 20];
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
@@ -17,9 +18,9 @@ namespace Game
             }
 
             GameMap[0, 0] = "H";
-            GameMap[19, 19] = "D";
+            GameMap[19, 19] = "D";*/
             #endregion
-
+            /*
             #region Alocação Aleatória
             static int XPosition()
             {
@@ -165,7 +166,8 @@ namespace Game
 
             }
             #endregion
-
+            */
+            GameMap
         }
 
     }

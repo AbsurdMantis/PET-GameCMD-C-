@@ -14,3 +14,11 @@ C:\Users\HomePC\source\repos\GamePET.NET\GamePET.NET\obj\Debug\net5.0\GamePET.NE
 C:\Users\HomePC\source\repos\GamePET.NET\GamePET.NET\obj\Debug\net5.0\ref\GamePET.NET.dll
 C:\Users\HomePC\source\repos\GamePET.NET\GamePET.NET\obj\Debug\net5.0\GamePET.NET.pdb
 C:\Users\HomePC\source\repos\GamePET.NET\GamePET.NET\obj\Debug\net5.0\GamePET.NET.genruntimeconfig.cache
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.csproj.AssemblyReference.cache
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.AssemblyInfoInputs.cache
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.AssemblyInfo.cs
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.csproj.CoreCompileInputs.cache
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.dll
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\ref\GamePET.NET.dll
+C:\Users\HomePC\source\repos\GamePET.NET\PET-GameCMD-C-\GamePET.NET\obj\Debug\net5.0\GamePET.NET.pdb
