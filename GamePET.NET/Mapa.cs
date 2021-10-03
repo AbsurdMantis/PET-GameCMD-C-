@@ -21,9 +21,55 @@ public class Mapa
 
         GameMap[0, 0] = "H";
         GameMap[19, 19] = "D";
-        
+
+        int enp = 0;
+        int inp = 0;
+        Random rnd = new Random();
+        while (enp < 7)
+        {
+            int mnstX = rnd.Next(2, 17);
+            int mnstY = rnd.Next(2, 17);
+            if (GameMap[mnstX,mnstY] == "0")
+            {
+                if (enp == 6)
+                {
+                    GameMap[mnstX, mnstY] = "B";
+                   
+                }
+                else 
+                { 
+                    GameMap[mnstX, mnstY] = "M";
+                    
+                }
+                enp++;
+            }
+        }
+
+        while (inp < 9)
+        {
+            int itemX = rnd.Next(1, 19);
+            int itemY = rnd.Next(1, 19);
+            if (GameMap[itemX, itemY] == "0")
+            {
+                if (inp == 8)
+                {
+                    GameMap[itemX, itemY] = "W";
+
+                }
+                else
+                {
+                    GameMap[itemX, itemY] = "P";
+
+                }
+                inp++;
+            }
+        }
     }
-    
+
+
+
+
+
     public void DisplayMap()
     {
         for (int i = 0; i < 20; i++)
@@ -70,7 +116,10 @@ public class Mapa
             Console.WriteLine();
 
         }
+
     }
-
+    public string[,] GetMap()
+    {
+        return GameMap;
+    }
 }
-
