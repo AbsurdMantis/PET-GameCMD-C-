@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+
+public class Destination : DefaultPosition
 {
-    class Destination
+    public override void Print()
     {
+        Console.ForegroundColor = ConsoleColor.DarkBlue;
+        Console.Write("D ");
     }
 }
+

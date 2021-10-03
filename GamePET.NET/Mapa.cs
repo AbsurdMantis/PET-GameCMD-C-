@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 public class Mapa
 {
-    string[,] GameMap = new string[20, 20];
+    DefaultPosition[,] GameMap = new DefaultPosition[20,20];
     public Mapa()
     {
         for (int i = 0; i < 20; i++)
         {
             for (int j = 0; j < 20; j++)
             {
-                GameMap[j, i] = "0";
+                GameMap[j, i] = new DefaultPosition();
             }
         }
 
-        GameMap[0, 0] = "H";
-        GameMap[19, 19] = "D";
+        GameMap[0, 0] = new Hero();
+        GameMap[19, 19] = new Destination();
 
         int enp = 0;
         int inp = 0;
@@ -29,16 +29,18 @@ public class Mapa
         {
             int mnstX = rnd.Next(2, 17);
             int mnstY = rnd.Next(2, 17);
-            if (GameMap[mnstX,mnstY] == "0")
+            if (GameMap[mnstX, mnstY].GetType() == typeof(DefaultPosition))
             {
                 if (enp == 6)
                 {
-                    GameMap[mnstX, mnstY] = "B";
+                    
+                    GameMap[mnstX, mnstY] = new Boss();
                    
                 }
                 else 
-                { 
-                    GameMap[mnstX, mnstY] = "M";
+                {
+                    
+                    GameMap[mnstX, mnstY] = new Monster();
                     
                 }
                 enp++;
@@ -49,16 +51,17 @@ public class Mapa
         {
             int itemX = rnd.Next(1, 19);
             int itemY = rnd.Next(1, 19);
-            if (GameMap[itemX, itemY] == "0")
+            if (GameMap[itemX, itemY].GetType() == typeof(DefaultPosition))
             {
                 if (inp == 8)
                 {
-                    GameMap[itemX, itemY] = "W";
+                    
+                    GameMap[itemX, itemY] = new Weapon();
 
                 }
                 else
                 {
-                    GameMap[itemX, itemY] = "P";
+                    GameMap[itemX, itemY] = new Potion();
 
                 }
                 inp++;
@@ -76,49 +79,18 @@ public class Mapa
         {
             for (int j = 0; j < 20; j++)
             {
-                switch (GameMap[j, i])
-                {
-                    case "B":
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.Write(GameMap[j, i] + " ");
-                        break;
-                    case "M":
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(GameMap[j, i] + " ");
-                        break;
-                    case "P":
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(GameMap[j, i] + " ");
-                        break;
-                    case "W":
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write(GameMap[j, i] + " ");
-                        break;
-                    case "H":
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.Write(GameMap[j, i] + " ");
-                        break;
-                    case "D":
-                        Console.ForegroundColor = ConsoleColor.DarkBlue;
-                        Console.Write(GameMap[j, i] + " ");
-                        Console.ResetColor();
-                        break;
+                GameMap[j, i].Print();
 
-                    default:
-                        Console.ResetColor();
-                        Console.Write(GameMap[j, i] + " ");
-                        break;
-
-
-                }
 
             }
             Console.WriteLine();
 
         }
+        Console.ResetColor();
 
     }
-    public string[,] GetMap()
+
+    public DefaultPosition[,] GetMap()
     {
         return GameMap;
     }

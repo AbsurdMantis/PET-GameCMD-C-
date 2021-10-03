@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+public class Boss : DefaultPosition
 {
-    class Boss
+    public override void Print()
     {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.Write("B ");
     }
 }

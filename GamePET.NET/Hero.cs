@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+
+public class Hero : DefaultPosition
 {
-    class Hero
+    public override void Print()
     {
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.Write("H ");
     }
 }
+

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+
+public class Monster : DefaultPosition
 {
-    class Enemy
+    public override void Print()
     {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write("M ");
     }
 }
+

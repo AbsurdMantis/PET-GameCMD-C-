@@ -5,6 +5,23 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePET.NET", "GamePET.NET\GamePET.NET.csproj", "{448F9BE3-BD48-4E2F-8E41-E419D2BFF249}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{037EF9A0-3AC6-4CE5-9056-0EEC17088C2F}"
+	ProjectSection(SolutionItems) = preProject
+		GamePET.NET\Boss.cs = GamePET.NET\Boss.cs
+		GamePET.NET\DefaultPosition.cs = GamePET.NET\DefaultPosition.cs
+		GamePET.NET\Destination.cs = GamePET.NET\Destination.cs
+		GamePET.NET\Hero.cs = GamePET.NET\Hero.cs
+		GamePET.NET\Monster.cs = GamePET.NET\Monster.cs
+		GamePET.NET\Potion.cs = GamePET.NET\Potion.cs
+		GamePET.NET\Weapon.cs = GamePET.NET\Weapon.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E0ABE9B8-880E-4909-99C6-87878BCADFBE}"
+	ProjectSection(SolutionItems) = preProject
+		GamePET.NET\Mapa.cs = GamePET.NET\Mapa.cs
+		GamePET.NET\Program.cs = GamePET.NET\Program.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+
+
+public class Potion : DefaultPosition
 {
-    class Potion
+    public override void Print()
     {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Write("P ");
     }
 }
+

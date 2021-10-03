@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+
+
+public class DefaultPosition
 {
-    class DefaultPosition
+    public virtual void Print()
     {
+        Console.ResetColor();
+        Console.Write("0 ");
     }
 }
+

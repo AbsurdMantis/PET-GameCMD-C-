@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GamePET.NET
+
+public class Weapon  : DefaultPosition
 {
-    class Weapon
+    public override void Print()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("W ");
     }
 }
+
