@@ -95,43 +95,34 @@ public class Mapa
     }
     #region move hero
     public void moveright()
-    {
-   
-        
+    { 
             if (GameMap[x, y].GetType() == typeof(Hero))
             {
                 if (x < 19){
-
                     GameMap[x, y] = new DefaultPosition();
-                x++;
-                    
+                    x++;                    
                     GameMap[x, y] = new Hero();
                     Console.Clear();
                 }
                 else if ( x == 19)
-                {
-                    
-                   
-
+                {                               
                     GameMap[x, y] = new Hero();
                     Console.Clear();
-                }
-            
+                }           
         }    
     }
     public void moveleft()
     {
-
-        if (x > 0)
+        if (GameMap[x, y].GetType() == typeof(Hero))
         {
-            if (GameMap[x, y].GetType() == typeof(Hero))
+            if (x > 0)
             {
                 GameMap[x, y] = new DefaultPosition();
                 x--;
                 GameMap[x, y] = new Hero();
                 Console.Clear();
             }
-            else if (x == 1)
+            else if (x == 0)
             {
                 GameMap[x, y] = new Hero();
                 Console.Clear();
@@ -140,31 +131,39 @@ public class Mapa
     }
     public void moveup()
     {
-
+        if (GameMap[x, y].GetType() == typeof(Hero))
         {
-            if (GameMap[x, y].GetType() == typeof(Hero))
+            if (y > 0)
             {
                 GameMap[x, y] = new DefaultPosition();
-                int b = y -1;
-                y = b;
+                y--;
+                GameMap[x, y] = new Hero();
+                Console.Clear();
+            }
+            else if (y == 0)
+            {
                 GameMap[x, y] = new Hero();
                 Console.Clear();
             }
         }
-    }
+    }                     
     public void movedown()
-    {
-
-        {
+    {              
             if (GameMap[x, y].GetType() == typeof(Hero))
             {
+            if (y < 19)
+            {
                 GameMap[x, y] = new DefaultPosition();
-                int b = y + 1;
-                y = b;
+                y++;
                 GameMap[x, y] = new Hero();
                 Console.Clear();
             }
-        }
+            else if ( y == 19)
+            {                
+                GameMap[x, y] = new Hero();
+                Console.Clear();
+                            }
+           }        
     }
     #endregion
     public DefaultPosition[,] GetMap()
