@@ -109,92 +109,173 @@ public class Mapa
                 {
                     if (GameMap[j, i].GetType() == typeof(Monster))
                     {
-                        
+
                         int[] e = new int[2];
                         int Index = rnd.Next(e.Length);
                         if (Index == 0) // +1 para baixo 
                         {
                             if (i == 19)
                             {
-                                GameMap[j, i] = new DefaultPosition();
                                 i--;
-                                GameMap[j, i] = new Monster();
-                            }
-                            else if(i < 19)
-                            {
-                                GameMap[j, i] = new DefaultPosition();
-                                i++;
-                                GameMap[j, i] = new Monster();
-                            }
-                        }
-                        if (Index == 1) //-1 para cima
-                        {
-                            if (i == 0)
-                            {
-                                GameMap[j, i] = new DefaultPosition();
-                                i++;
-                                GameMap[j, i] = new Monster();
-
-                            }
-                            else if (i > 0)
-                            {
-                                GameMap[j, i] = new DefaultPosition();
-                                i--;
-                                GameMap[j, i] = new Monster();
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (mIndex == 1) // para horizontal
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                for (int j = 0; j < 20; j++)
-                {
-                    if (GameMap[j, i].GetType() == typeof(Monster))
-                    {
-                        int[] e = new int[2];
-                        int Index = rnd.Next(e.Length);
-                        if (Index == 0) // +1 para direita
-                        {
-                            if (j == 19)
-                            {
-                                GameMap[j, i] = new DefaultPosition();
-                                j--;
-                                GameMap[j, i] = new Monster();
-
-                            }
-                            else if(j < 19)
+                                if (GameMap[j, i].GetType() == typeof(DefaultPosition))
                                 {
-                                GameMap[j, i] = new DefaultPosition();
-                                j++;
+                                    GameMap[j, i] = new DefaultPosition();
+                                    GameMap[j, i] = new Monster();
+                                }
+                                else
+                                {
+                                    if (j == 19)
+                                    {
+                                        j--;
+                                        if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                        {
+                                            GameMap[j, i] = new DefaultPosition();
+                                            GameMap[j, i] = new Monster();
+                                        }
+                                    }                                    
+                                    else if (j < 19)
+                                    {
+                                        
+                                        j++;
+                                        if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                        {
+                                            GameMap[j, i] = new DefaultPosition();
+                                            GameMap[j, i] = new Monster();
+                                        }
+                                    }
+                                    else if (j < 19)
+                                    {                                       
+                                        j--;
+                                        if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                        {
+                                            GameMap[j, i] = new DefaultPosition();
+                                            GameMap[j, i] = new Monster();
+                                        }
+                                    }
+                                }
+                                }
+                            }
+
+                            else if (i < 19)
+                            {
+
+
+                                i++;
+                                if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                {
+                                    GameMap[j, i] = new DefaultPosition();
+                                    GameMap[j, i] = new Monster();
+                                }
+                                else
+                                {
+                                if (j == 19)
+                                {
+                                    j--;
+                                    if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                    {
+                                        GameMap[j, i] = new DefaultPosition();                                        
+                                        GameMap[j, i] = new Monster();
+                                    }
+                                }
+                                else if (j < 19)
+                                {                                    
+                                    j++;
+                                    if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                    {
+                                        GameMap[j, i] = new DefaultPosition();
+                                        GameMap[j, i] = new Monster();
+                                    }
+                                }
+                                else if (j < 19)
+                                {                                    
+                                    j++;
+                                    if (GameMap[j, i].GetType() == typeof(DefaultPosition))
+                                    {
+                                        GameMap[j, i] = new DefaultPosition();
+                                        GameMap[j, i] = new Monster();
+                                    }
+                                }
+                                }
+                            }
+                            if (Index == 1) //-1 para cima
+                            {
+                                if (i == 0)
+                                {
+                                    GameMap[j, i] = new DefaultPosition();
+                                    i++;
+                                    GameMap[j, i] = new Monster();
+
+                                }
+                                else if (i > 0)
+                                {
+                                    GameMap[j, i] = new DefaultPosition();
+                                    i--;
+                                    GameMap[j, i] = new Monster();
+                                }
+                            }
+                            else
+                            {
                                 GameMap[j, i] = new Monster();
+
                             }
                         }
-                        if (Index == 1) //-1 para esquerda
+
+                    }
+                
+            }
+            if (mIndex == 1) // para horizontal
+            {
+                for (int i = 0; i < 20; i++)
+                {
+                    for (int j = 0; j < 20; j++)
+                    {
+                        if (GameMap[j, i].GetType() == typeof(Monster))
                         {
-                            if (j == 0)
+
+                            int[] e = new int[2];
+                            int Index = rnd.Next(e.Length);
+                            if (Index == 0) // +1 para direita
                             {
-                                
-                                GameMap[j, i] = new DefaultPosition();
-                                j++;
-                                GameMap[j, i] = new Monster();
+                                if (j == 19)
+                                {
+                                    GameMap[j, i] = new DefaultPosition();
+                                    j--;
+                                    GameMap[j, i] = new Monster();
+
+                                }
+                                else if (j < 19)
+                                {
+                                    GameMap[j, i] = new DefaultPosition();
+                                    j++;
+                                    GameMap[j, i] = new Monster();
+                                }
                             }
-                            else if ( j > 0)
+                            if (Index == 1) //-1 para esquerda
                             {
-                                GameMap[j, i] = new DefaultPosition();
-                                j--;
-                                GameMap[j, i] = new Monster();
+                                if (j == 0)
+                                {
+
+                                    GameMap[j, i] = new DefaultPosition();
+                                    j++;
+                                    GameMap[j, i] = new Monster();
+                                }
+                                else if (j > 0)
+                                {
+                                    GameMap[j, i] = new DefaultPosition();
+                                    j--;
+                                    GameMap[j, i] = new Monster();
+                                }
                             }
+
+
+
                         }
                     }
                 }
             }
         }
-    }
 
+    }
 
 
 
