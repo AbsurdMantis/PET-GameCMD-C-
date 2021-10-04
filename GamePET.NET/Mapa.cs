@@ -92,196 +92,81 @@ public class Mapa
     }
     #endregion
 
-    #region move enemy
+
     public void moveenemy()
     {
+
+
         Random rnd = new Random();
+        int[] random = new int[4];
+        int Index = rnd.Next(random.Length);
 
-        int[] index = new int[2];
 
-
-        int mIndex = rnd.Next(index.Length);
-        if (mIndex == 0) // para vertical
+        for (int i = 0; i < 20; i++)
         {
-            for (int i = 0; i < 20; i++)
+            for (int j = 0; j < 20; j++)
             {
-                for (int j = 0; j < 20; j++)
+                if (GameMap[j, i].GetType() == typeof(Monster) && ((Monster)GameMap[j, i]).moved == false)
                 {
-                    if (GameMap[j, i].GetType() == typeof(Monster))
+                    
+                    if (Index == 0)
                     {
-
-                        int[] e = new int[2];
-                        int Index = rnd.Next(e.Length);
-                        if (Index == 0) // +1 para baixo 
+                        if (j < 19)
                         {
-                            if (i == 19)
-                            {
-                                i--;
-                                if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    GameMap[j, i] = new Monster();
-                                }
-                                else
-                                {
-                                    if (j == 19)
-                                    {
-                                        j--;
-                                        if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                        {
-                                            GameMap[j, i] = new DefaultPosition();
-                                            GameMap[j, i] = new Monster();
-                                        }
-                                    }                                    
-                                    else if (j < 19)
-                                    {
-                                        
-                                        j++;
-                                        if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                        {
-                                            GameMap[j, i] = new DefaultPosition();
-                                            GameMap[j, i] = new Monster();
-                                        }
-                                    }
-                                    else if (j < 19)
-                                    {                                       
-                                        j--;
-                                        if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                        {
-                                            GameMap[j, i] = new DefaultPosition();
-                                            GameMap[j, i] = new Monster();
-                                        }
-                                    }
-                                }
-                                }
-                            }
-
-                            else if (i < 19)
-                            {
-
-
-                                i++;
-                                if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    GameMap[j, i] = new Monster();
-                                }
-                                else
-                                {
-                                if (j == 19)
-                                {
-                                    j--;
-                                    if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                    {
-                                        GameMap[j, i] = new DefaultPosition();                                        
-                                        GameMap[j, i] = new Monster();
-                                    }
-                                }
-                                else if (j < 19)
-                                {                                    
-                                    j++;
-                                    if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                    {
-                                        GameMap[j, i] = new DefaultPosition();
-                                        GameMap[j, i] = new Monster();
-                                    }
-                                }
-                                else if (j < 19)
-                                {                                    
-                                    j++;
-                                    if (GameMap[j, i].GetType() == typeof(DefaultPosition))
-                                    {
-                                        GameMap[j, i] = new DefaultPosition();
-                                        GameMap[j, i] = new Monster();
-                                    }
-                                }
-                                }
-                            }
-                            if (Index == 1) //-1 para cima
-                            {
-                                if (i == 0)
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    i++;
-                                    GameMap[j, i] = new Monster();
-
-                                }
-                                else if (i > 0)
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    i--;
-                                    GameMap[j, i] = new Monster();
-                                }
-                            }
-                            else
-                            {
-                                GameMap[j, i] = new Monster();
-
-                            }
+                            ((Monster)GameMap[j, i]).setMoved(true);
+                            GameMap[j + 1, i] = GameMap[j, i];
+                            GameMap[j, i] = new DefaultPosition();
+                        }
+                    }
+                    else if (Index == 1)
+                    {
+                        if (j > 0)
+                        {
+                            ((Monster)GameMap[j, i]).setMoved(true);
+                            GameMap[j - 1, i] = GameMap[j, i];
+                            GameMap[j, i] = new DefaultPosition();
+                        }
+                    }
+                    else if (Index == 2)
+                    {
+                        if (i < 19)
+                        {
+                            ((Monster)GameMap[j, i]).setMoved(true);
+                            GameMap[j, i + 1] = GameMap[j, i];
+                            GameMap[j, i] = new DefaultPosition();
+                        }
+                    }
+                    else if (Index == 3)
+                    {
+                        if (i > 0)
+                        {
+                            ((Monster)GameMap[j, i]).setMoved(true);
+                            GameMap[j, i - 1] = GameMap[j, i];
+                            GameMap[j, i] = new DefaultPosition();
                         }
 
                     }
-                
+
+                }
             }
-            if (mIndex == 1) // para horizontal
+
+        }
+        for (int i = 0; i < 20; i++)
+        {
+            for (int j = 0; j < 20; j++)
             {
-                for (int i = 0; i < 20; i++)
+                if (GameMap[j, i].GetType() == typeof(Monster))
                 {
-                    for (int j = 0; j < 20; j++)
-                    {
-                        if (GameMap[j, i].GetType() == typeof(Monster))
-                        {
-
-                            int[] e = new int[2];
-                            int Index = rnd.Next(e.Length);
-                            if (Index == 0) // +1 para direita
-                            {
-                                if (j == 19)
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    j--;
-                                    GameMap[j, i] = new Monster();
-
-                                }
-                                else if (j < 19)
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    j++;
-                                    GameMap[j, i] = new Monster();
-                                }
-                            }
-                            if (Index == 1) //-1 para esquerda
-                            {
-                                if (j == 0)
-                                {
-
-                                    GameMap[j, i] = new DefaultPosition();
-                                    j++;
-                                    GameMap[j, i] = new Monster();
-                                }
-                                else if (j > 0)
-                                {
-                                    GameMap[j, i] = new DefaultPosition();
-                                    j--;
-                                    GameMap[j, i] = new Monster();
-                                }
-                            }
-
-
-
-                        }
-                    }
+                    ((Monster)GameMap[j, i]).setMoved(false);
                 }
             }
         }
 
+
+
+
+
     }
-
-
-
-
-
-    #endregion
 
     #region moveboss
     public void moveboss()
