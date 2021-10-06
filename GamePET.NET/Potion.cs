@@ -8,14 +8,11 @@ using System.Threading.Tasks;
 
 public class Potion : DefaultPosition
 {
-   
     public override void Print()
     {
         
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write("P ");
-    }
-    
-    
+    }    
 }
 

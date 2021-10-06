@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 public class Hero : DefaultPosition
 {
-    public int HP = 800;
+    public int HP = 25;
     public int Score = 25;
     public int Damage = 1;
     //public Potion[] Potion = new Potion[8];
@@ -32,6 +32,6 @@ public class Hero : DefaultPosition
     {
         Damage += 1;
     }
-    
+
 }
 
