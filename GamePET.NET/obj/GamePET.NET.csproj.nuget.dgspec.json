@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HomePC\\Downloads\\Nova_pasta_6 (2)\\GamePET.NET\\GamePET.NET.csproj": {}
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\Nova pasta (7)\\Nova pasta (6)\\GamePET.NET\\GamePET.NET.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HomePC\\Downloads\\Nova_pasta_6 (2)\\GamePET.NET\\GamePET.NET.csproj": {
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\Nova pasta (7)\\Nova pasta (6)\\GamePET.NET\\GamePET.NET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HomePC\\Downloads\\Nova_pasta_6 (2)\\GamePET.NET\\GamePET.NET.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\Nova pasta (7)\\Nova pasta (6)\\GamePET.NET\\GamePET.NET.csproj",
         "projectName": "GamePET.NET",
-        "projectPath": "C:\\Users\\HomePC\\Downloads\\Nova_pasta_6 (2)\\GamePET.NET\\GamePET.NET.csproj",
-        "packagesPath": "C:\\Users\\HomePC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HomePC\\Downloads\\Nova_pasta_6 (2)\\GamePET.NET\\obj\\",
+        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\Nova pasta (7)\\Nova pasta (6)\\GamePET.NET\\GamePET.NET.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\Nova pasta (7)\\Nova pasta (6)\\GamePET.NET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Nova pasta (5)\\frames\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\HomePC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
