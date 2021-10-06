@@ -19,9 +19,7 @@ public class Hero : DefaultPosition
     }
     public void DecreaseHP()
     {
-        Console.WriteLine(HP);
-        HP--;
-        Console.WriteLine(HP);
+       HP--;
     }
     public void regenhp()
     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1GJdtH75kO/ZJsBygYWVDYB0sD17+XE2LlnCt1dY50Trq+Va3BsOpbzhijb8lSxmwh7NmNq46bcbB3scrL/aXQ==",
+  "dgSpecHash": "HHQGr1JutLdLYKphZeaSouF742Cd0H4W/XIouDmFKlWYtIUcNCq4NTJxuemBAJdeHQOvCF+VhnVXrawC9By8DQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HomePC\\source\\repos\\GamePET.NET\\PET-GameCMD-C-\\GamePET.NET\\GamePET.NET.csproj",
+  "projectFilePath": "C:\\Users\\HomePC\\Downloads\\Nova_pasta_6 (2)\\GamePET.NET\\GamePET.NET.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HomePC\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\HomePC\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",

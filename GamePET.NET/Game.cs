@@ -79,7 +79,7 @@ Press any key to exit.";
 
             int[] Position = cx.FindHero();
             Hero hr = (Hero)cx.GameMap[Position[0], Position[1]];
-            if (hr.HP == 0)
+            if (hr.HP <= 0)
             {
                 GameOver();
             }
@@ -115,6 +115,15 @@ Press any key to exit.";
                 ((Hero)cx.GameMap[Position[0], Position[1]]).HP--;
                 cx.movedown();
             }
+            if (cki.KeyChar == ' ')
+            {
+                cx.combat();
+            }
+            else
+            {
+                Console.Clear();
+            }
+            
         }
     }
     public void GameWin()
@@ -129,7 +138,9 @@ Press any key to exit.";
         Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Congratulations, You WON!"));
         Console.ResetColor();
-        string ending = @"Thanks for participating in this experience.We hope this is the first of many opportunities to show our work to such graceful people.
+        string ending = @"Thanks for participating in this experience. We hope this is the first of many opportunities to show our work to such graceful people.
+
+
 Press any key to exit to menu.";
         TexAnimation.AnimateText(ending);
         Console.ReadKey(true);
@@ -151,6 +162,8 @@ Press any key to exit to menu.";
         Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "Your journey ends here, yet."));
         Console.ResetColor();
         string ending = @"Either try again to defy destiny in Jogin, or forfeit it as now it's time to. Thanks for participating in this experience.
+
+
 Press any key to exit to menu.";
         TexAnimation.AnimateText(ending);
         Console.ReadKey(true);
