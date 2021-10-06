@@ -18,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E0ABE9B8-880E-4909-99C6-87878BCADFBE}"
 	ProjectSection(SolutionItems) = preProject
+		GamePET.NET\Game.cs = GamePET.NET\Game.cs
 		GamePET.NET\Mapa.cs = GamePET.NET\Mapa.cs
+		GamePET.NET\Menu.cs = GamePET.NET\Menu.cs
 		GamePET.NET\Program.cs = GamePET.NET\Program.cs
 	EndProjectSection
 EndProject

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 public class Boss : DefaultPosition
 {
+    int HP = 10;
+    int Score = 10;
+    int Damage = 2;
     public bool moved = false;
     public override void Print()
     {
@@ -15,6 +18,5 @@ public class Boss : DefaultPosition
     public void setMoved(bool pmoved)
     {
         moved = pmoved;
-
     }
 }
