@@ -33,7 +33,7 @@ class GameTemp
   ███    ███     ███    ███   ███    ███ ███    ███      ███    ███   ███                 ███ ███    ███   ███    ███ ███  ███   ███ 
   ███    █▀      ██████████   ███    ███  ▀██████▀        ▀██████▀    ███             █▄ ▄███  ▀██████▀    ████████▀  █▀    ▀█   █▀  
                               ███    ███                                              ▀▀▀▀▀▀                                         
-Use W and S to navigate menu.";
+Use 'W' and 'S' to navigate menu and 'Enter' to select.";
         string[] options = { "Play", "About", "Exit" };
         Menu mainMenu = new Menu(prompt, options);
         int selectedIndex = mainMenu.Run();

@@ -19,6 +19,7 @@ class Menu
         Options = options;
         SelectedIndex = 0;
     }
+    //Método para dar display em todos os menus da tela inicial
     private void DisplayOptions()
     {
        
@@ -47,6 +48,8 @@ class Menu
         }
         Console.ResetColor();
     }
+
+    //Método para inicializar a partir do menu selecionado
     public int Run()
     {
         ConsoleKey keyPressed;

@@ -21,8 +21,6 @@ class TexAnimation
     private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
     private const int MAXIMIZE = 3;
 
-
-
     public static void Maximize()
     {
         ShowWindow(ThisConsole, MAXIMIZE);

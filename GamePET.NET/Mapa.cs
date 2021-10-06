@@ -342,13 +342,8 @@ public class Mapa
             }
         }
     }
-
-
-
-
-
     #endregion
-
+    //Método que coordena o combate usando a posição atual do heroi comparada com a do inimigo e a dedução de vida de cada um com a aproximação/entrada em combate
     public void combat()
     {
 
